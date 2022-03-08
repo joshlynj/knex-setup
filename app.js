@@ -1,4 +1,8 @@
 const express = require('express');
+//const morgan = require("morgan");
+
+// // middleware goes here
+// app.use(morgan("tiny"));
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -22,3 +26,5 @@ app.get('/movies', function(req, res) {
 app.listen(PORT, () => {
   console.log(`The server is running on ${PORT}`);
 });
+
+module.exports = app;
